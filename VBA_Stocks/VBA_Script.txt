@@ -13,6 +13,7 @@ Dim WS As Worksheet
         Dim Percent_Change As Double
         Dim Volume As Double
         Volume = 0
+        'This row was needed to ensure the number in the first row doesn't change for percent change row. I am not sure why though
         Dim Row As Double
         Row = 2
         Dim i As Long
@@ -28,7 +29,7 @@ Dim WS As Worksheet
          ' Loop through all ticker symbols
         
         For i = 2 To LastRow
-         ' If statements on ticker sysmbols and check if theyre the same
+         ' IGoes through each row and determine if they have the same ticker name
             If Cells(i + 1, 1).Value <> Cells(i, 1).Value Then
                 ' Set Ticker name
                 Ticker_Name = Cells(i, 1).Value
@@ -92,5 +93,3 @@ Dim WS As Worksheet
         Next T
      'go to the next worksheet
     Next WS
-        
-End Sub
