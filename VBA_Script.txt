@@ -13,6 +13,7 @@ Dim WS As Worksheet
         Dim Percent_Change As Double
         Dim Volume As Double
         Volume = 0
+        'This row was needed to ensure the number in the first row doesn't change for percent change row. I am not sure why though
         Dim Row As Double
         Row = 2
         Dim i As Long
